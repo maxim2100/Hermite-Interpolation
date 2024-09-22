@@ -61,14 +61,14 @@ def display_results(data_points, h, dh, simplified_h, simplified_dh):
 
 def Drive():
     """Collects user input and computes H(x), H'(x), errors, and error terms."""
-    # num_points = int(input("How many points do you want to enter? "))
-    # data_points = [(
-    #     float(input(f"Enter xi for point {i + 1}: ")),
-    #     float(input(f"Enter f(xi) for point {i + 1}: ")),
-    #     float(input(f"Enter f'(xi) for point {i + 1}: "))
-    # ) for i in range(num_points)]
+    num_points = int(input("How many points do you want to enter? "))
+    data_points = [(
+        float(input(f"Enter xi for point {i + 1}: ")),
+        float(input(f"Enter f(xi) for point {i + 1}: ")),
+        float(input(f"Enter f'(xi) for point {i + 1}: "))
+    ) for i in range(num_points)]
     # ln  data_points = [(1, 0, 1), (5, 1.6094377, 0.2), (9, 2.197224577, 0.111111111)]
-    data_points = [(1, 0, 1), (2, 0.693147181, 0.5)]
+    # data_points = [(1, 0, 1), (2, 0.693147181, 0.5)]
     h, dh, simplified_h, simplified_dh = Hermite_Interpolation(data_points)
     
     # Display the results
